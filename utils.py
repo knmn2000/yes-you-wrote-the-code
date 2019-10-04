@@ -1,6 +1,6 @@
 import re
 import glob
-from classjugaad import classJugaad
+from ClassChangeCSS import ClassChangeCSS
 
 class FileManager:
 
@@ -44,6 +44,6 @@ class FileManager:
         return string
     
     def change_classNames_css(self, string):
-        print('EDIT CLASSJUGAD.PY FOR CUSTOM CLASS NAMES')
-        string = classJugaad(string)
+        print('\n *Remember to edit the list of class names for customized class names in* \n')
+        string = ClassChangeCSS(string)
         return string
