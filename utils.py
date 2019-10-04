@@ -1,5 +1,6 @@
 import re
 import glob
+from classjugaad import classJugaad
 
 class FileManager:
 
@@ -11,13 +12,16 @@ class FileManager:
             print("Found None!")
         print(self.txtFiles)
 
+
     def traverse_and_replace(self):
         for txtFile in self.txtFiles:
             f = open(txtFile, 'r+')
             file_content = str(f.read())
-            if self.file_type == 'css':
+            if txtFile.split('.')[1] == 'css':
+                
                 file_content = self.remove_comments_css_style(file_content)
-            elif self.file_type == 'html':
+                file_content = self.change_classNames_css(file_content)
+            elif txtFile.split('.')[1] == 'html':
                 file_content = self.remove_comments_html_style(file_content)
             else:
                 file_content = self.remove_comments_c_style(file_content)
@@ -37,4 +41,9 @@ class FileManager:
 
     def remove_comments_html_style(self, string):
         string = re.sub(re.compile("<!--(.*?)-->"), "", string)
+        return string
+    
+    def change_classNames_css(self, string):
+        print('EDIT CLASSJUGAD.PY FOR CUSTOM CLASS NAMES')
+        string = classJugaad(string)
         return string
