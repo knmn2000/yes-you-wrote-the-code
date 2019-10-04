@@ -4,15 +4,7 @@ import os
 import fileinput
 import random
 def classJugaad(contents):
-    #code = open('D:\prog\github_ka_maal\yes-you-wrote-the-code-master\code.txt', 'r')
-    #contents = code.read()
     pattern = '(\s\.\w+[-]?\w+)'
-
-
-
-    #with open('D:\prog\github_ka_maal\yes-you-wrote-the-code-master\code.txt', 'r') as file:
-     #   filedata = file.read().split('\n')
-    #file.close()
     filedata = contents.split('\n')
     list_of_classNames = ['ek','do','3','insect',
         'inspection',
@@ -55,4 +47,4 @@ def classJugaad(contents):
     return words
 
     '''with open('iWroteTheGoddamnCodeFFS.txt', 'w') as rektSimulator3000:
-        rektSimulator3000.write(words)'''
+        rektSimulator3000.write(words)''' # lmao, purane attempts 0_0
